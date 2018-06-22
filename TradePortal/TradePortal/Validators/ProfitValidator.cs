@@ -7,6 +7,10 @@ using TradePortal.Model;
 
 namespace TradePortal.Validators
 {
+    /// <summary>
+    /// profit validator- validates a trade (an uncomited transaction) before its executed
+    /// based on its profitability.
+    /// </summary>
     class ProfitValidator : IValidator
     {
         public ICommodity Comodity { get; }
@@ -18,7 +22,7 @@ namespace TradePortal.Validators
         {
             Comodity = comodity;
             Trade = trade;
-            TradeValidator = new TradeValidator(trade, comodity);
+            TradeValidator = new TradeValidator(trade);
         }
 
         public bool IsValid() => TradeValidator.IsValid() && Trade.GetTradeCost() > Comodity.GetCost();

@@ -7,6 +7,9 @@ using TradePortal.Model;
 
 namespace TradePortal.Validators
 {
+    /// <summary>
+    /// Interface to validate any tracaction before its executed.
+    /// </summary>
    public interface IValidator
     {
         ITrade Trade { get; }

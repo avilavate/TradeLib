@@ -7,6 +7,9 @@ using TradePortal.Model;
 
 namespace TradePortal.Transactions
 {
+    /// <summary>
+    /// Transaction contract.
+    /// </summary>
     interface ITransaction
     {
         ICommodity TxCommodity { get; set; }

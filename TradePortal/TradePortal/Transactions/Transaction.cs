@@ -11,6 +11,9 @@ using TradePortal.Validators;
 
 namespace TradePortal.Transactions
 {
+    /// <summary>
+    /// A basic commodity trade transaction class supports buy sell and associated validations.
+    /// </summary>
     public class Transaction : ITransaction
     {
         public ICommodity TxCommodity { get; set; }
@@ -24,7 +27,7 @@ namespace TradePortal.Transactions
             TxTrade = trade;
 
             TxProfitValidator = new ProfitValidator(TxCommodity, TxTrade);
-            TxTradeValidator = new TradeValidator(TxTrade, TxCommodity);
+            TxTradeValidator = new TradeValidator(TxTrade);
         }
 
         public void Buy()
