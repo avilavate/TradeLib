@@ -4,7 +4,7 @@
     - Any commodity (gold) can be sold.
 ### Validators:
     - Trade validor to validate trade befoe its executed.
-    - Profit validator if the trade is making losses.
+    - Profit validator to validate if the trade is making losses.
 ### Wallet Managment:
     - A fake wallet service to manage wallet
     
