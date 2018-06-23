@@ -4,6 +4,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using TradePortal.Fakes;
+using TradePortal.Transactions;
 
 namespace TradePortal.Model
 {
@@ -23,6 +25,7 @@ namespace TradePortal.Model
             Quantity = quantity;
         }
 
-        public float GetCost() => Rate * Quantity;
+        public float GetCost() => TransactionLedgerService.GetAverageCost();
+        //Rate * Quantity;
     }
 }
