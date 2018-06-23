@@ -39,7 +39,7 @@ namespace TradePortal.Transactions
         public void Buy()
         {
             if (!TxTradeValidator.IsValid()) return;
-            using (var myWallet = new GoldWallet(WalletService.FetchBalance(), new GSTGold()))
+            using (var myWallet = new GoldWallet(WalletService.FetchBalance(), new GoldTaxLoad()))
             {
                 using (var ts = new TransactionScope())
                 {
@@ -61,12 +61,12 @@ namespace TradePortal.Transactions
         public void Sell(ICommodity sellingCommodity)
         {
             if (!TxProfitValidator.IsValid()) throw new Exception("The trade is not profitable");
-            using (var myWallet = new GoldWallet(WalletService.FetchBalance(), new GSTGold()))
+            using (var myWallet = new GoldWallet(WalletService.FetchBalance(), new GoldTaxLoad()))
             {
                 using (var ts = new TransactionScope())
                 {
                     TxCommodity.Quantity -= TxTrade.TradeQuantity;
-                    myWallet.Credit(TxTrade.GetTradeCost());
+                    myWallet.Credit(TxTrade.GetTradeCost()-GoldTaxLoad.GoldBuyTransactionCharges);
                 }
             }
         }

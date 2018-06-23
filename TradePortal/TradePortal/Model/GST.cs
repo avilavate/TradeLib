@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace TradePortal.Model
 {
     //GST applied on gold.
-    class GSTGold:ITax
+    public class GoldTaxLoad : ITax
     {
         public float TaxRate { get; } = 5.0F;
+        public static float GoldBuyTransactionCharges = 100F;
     }
 }
