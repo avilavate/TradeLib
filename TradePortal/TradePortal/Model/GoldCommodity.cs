@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace TradePortal.Model
 {
+    /// <summary>
+    /// Implements ICommodity interface
+    /// represents gold commodity
+    /// </summary>
     public class GoldCommodity:ICommodity
     {
         private const string ComodityName = "GoldCommodity";

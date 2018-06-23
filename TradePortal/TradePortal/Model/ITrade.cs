@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TradePortal.Model
 {
+    /// <summary>
+    /// Trade contract
+    /// </summary>
    public interface ITrade
     {
         float TradePrice { get; set; }

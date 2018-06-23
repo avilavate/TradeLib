@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace TradePortal.Model
 {
+    /// <summary>
+    /// Walet represents folowing features:
+    /// - Check balance
+    /// - Add GST
+    /// - Debit from balance
+    /// 
+    /// </summary>
     class GoldWallet : BaseWallet, IDisposable
     {
         private ITax GSTonGold { get; set; }

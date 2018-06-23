@@ -7,6 +7,10 @@ using System.Xml.Linq;
 
 namespace TradePortal.Model
 {
+    /// <summary>
+    /// represent any commodity
+    /// for our example its gold
+    /// </summary>
     public interface ICommodity
     {
         string Name { get; }

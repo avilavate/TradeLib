@@ -3,3 +3,4 @@ C:\TradeLib\TradePortal\TradePortal\bin\Debug\TradePortal.pdb
 C:\TradeLib\TradePortal\TradePortal\obj\Debug\TradePortal.csproj.CoreCompileInputs.cache
 C:\TradeLib\TradePortal\TradePortal\obj\Debug\TradePortal.dll
 C:\TradeLib\TradePortal\TradePortal\obj\Debug\TradePortal.pdb
+C:\TradeLib\TradePortal\TradePortal\obj\Debug\TradePortal.csprojResolveAssemblyReference.cache

@@ -30,6 +30,12 @@ namespace TradePortal.Transactions
             TxTradeValidator = new TradeValidator(TxTrade);
         }
 
+        /// <summary>
+        /// Buy commodity 
+        /// Checks:
+        /// if wallet has balance
+        /// add tx in ledger
+        /// </summary>
         public void Buy()
         {
             if (!TxTradeValidator.IsValid()) return;
@@ -45,6 +51,13 @@ namespace TradePortal.Transactions
             }
         }
 
+        /// <summary>
+        /// Sell commodoty method
+        /// Checks:
+        /// if trade is profatble
+        /// credits the profit back in wallet
+        /// </summary>
+        /// <param name="sellingCommodity"></param>
         public void Sell(ICommodity sellingCommodity)
         {
             if (!TxProfitValidator.IsValid()) throw new Exception("The trade is not profitable");
