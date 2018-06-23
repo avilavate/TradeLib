@@ -66,7 +66,7 @@ namespace TradePortal.Transactions
                 using (var ts = new TransactionScope())
                 {
                     TxCommodity.Quantity -= TxTrade.TradeQuantity;
-                    myWallet.Credit(TxTrade.GetTradeCost()-GoldTaxLoad.GoldBuyTransactionCharges);
+                    myWallet.Credit(TxTrade.GetTradeCost()-(GoldTaxLoad.GoldBuyTransactionCharges * sellingCommodity.Quantity));
                 }
             }
         }
